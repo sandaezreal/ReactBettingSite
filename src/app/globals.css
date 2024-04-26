@@ -2,32 +2,189 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.nav-slider {
+  height: 203px;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background: #050606;
+    color: white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.text-sikwin {
+    --tw-text-opacity: 1;
+    color: rgb(235 209 147 / var(--tw-text-opacity));
+}
+
+
+@media (min-width: 768px) {
+
+
+  .md\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.md\:p-4 {
+  padding: 1rem;
+}
+}
+
+.p-2 {
+    padding: 0.5 rem;
+}
+.display-flex{
+    display: flex;
+}
+  .bg-main{
+     background-color: #0f0f0f;
   }
+
+  .border {
+    border-width: px;
+  }
+
+  .rounded-2x1 {
+    border-radius: 1rem;
+  }
+
+  .w-\[16vw\]{
+    width: 16vw;
+  }
+
+  .h-\[16vw\] {
+    width: 16vw;
+  }
+  
+  .text-gold-600{
+    --tw-text-opacity: 1;
+    color: rgb(235 209 147 / var(--tw-text-opacity)) !important;
+    border-color: rgb(235 209 147 / var(--tw-text-opacity)) !important;
+  }
+
+  #profile {
+    background-color: black;
+  }
+  
+  .text-defaul-600 {
+    color: white;
+  }
+
+  .odds-1::before{
+    content: "W1";
+    color: white;
+    font-size: 11px;
+    padding-top: 16px;
+    position: absolute;
+  }
+
+  
+  .odds-2::before{
+    content: "X";
+    color: white;
+    font-size: 11px;
+    padding-top: 16px;
+    position: absolute;
+  }
+
+  .odds-3::before{
+    content: "W2";
+    color: white;
+    font-size: 11px;
+    padding-top: 16px;
+    position: absolute;
+  }
+
+  /* Betting Slip  */
+
+  .button-bet-slip {
+    position: fixed;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border-width: 0;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    text-align: center;
+    font-family: Roboto, system-ui, BlinkMacSystemFont, -apple-system, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-style: normal;
+    --tw-text-opacity: 1;
+    color: rgba(21, 67, 91, var(--tw-text-opacity));
+    font-size: 15px;
+    bottom: 30px;
+    right: 10px;
+    transition: all .5s ease;
+    will-change: transform;
+    min-width: 56px;
+    width: 56px;
+    height: 56px;
+    white-space: nowrap;
+    background-image: linear-gradient(180deg, #f6bb22, #ff5d01);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .38);
+}
+
+.flowbite-accordion-heading {
+  display: flex;
+}
+
+
+.BetSlip_Payout {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.total_Bet {
+  position: fixed;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    bottom: 30px;
+    width: 90% ;
+    transition: all .5s ease;
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .drawer_height > div {
+    width: 100% !important;
+  }
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.ViewMatch_Timer { 
+  padding-top: 30px;
+  text-align: center; 
+  font-weight: bold; 
+  font-size: 1.25rem;
+  font-family: Chivo,system-ui,BlinkMacSystemFont,-apple-system,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+
+.versus_text {
+  font-size: 1.40rem;
+  font-size: bold;
+}
+
+.live_circle {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255,71,71,var(--tw-bg-opacity));
+  width: 6px;
+  height: 6px;
 }

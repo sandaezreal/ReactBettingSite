@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/sandaezreal/ReactBettingSite",
   "name": "my-project",
   "version": "0.1.0",
   "private": true,
@@ -6,21 +7,29 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "my-project -d build"
   },
   "dependencies": {
+    "flowbite": "^2.3.0",
+    "flowbite-react": "^0.9.0",
+    "next": "14.2.2",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.2"
+    "react-twitch-embed": "^3.0.2",
+    "react-twitch-embed-video": "^3.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "@types/react-router-dom": "^5.3.3",
     "eslint": "^8",
-    "eslint-config-next": "14.2.2"
+    "eslint-config-next": "14.2.2",
+    "postcss": "^8",
+    "react-router-dom": "^6.23.0",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5"
   }
 }
