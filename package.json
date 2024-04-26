@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/sandaezreal/ReactBettingSite",
+  "homepage": "http://sandaezreal.github.io/ReactBettingSite",
   "name": "my-project",
   "version": "0.1.0",
   "private": true,
@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "my-project -d build"
+    "deploy": "ghpages -d build"
   },
   "dependencies": {
     "flowbite": "^2.3.0",
@@ -27,6 +27,7 @@
     "@types/react-router-dom": "^5.3.3",
     "eslint": "^8",
     "eslint-config-next": "14.2.2",
+    "gh-pages": "^6.1.1",
     "postcss": "^8",
     "react-router-dom": "^6.23.0",
     "tailwindcss": "^3.4.3",
