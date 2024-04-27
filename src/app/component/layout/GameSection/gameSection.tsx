@@ -14,7 +14,7 @@ export function Esport() {
     <div className="flex flex-col gap-3">
       <Tabs aria-label="Default tabs" style="default" ref={tabsRef} onActiveTabChange={(tab) => setActiveTab(tab)}>
         <Tabs.Item active  title="Up Next">
-           <GameList gametype={gametype.current}></GameList>
+           <GameList gametype="UpNext"></GameList>
         </Tabs.Item>
         <Tabs.Item title="Popular">
         <GameList  gametype='Popular'></GameList>

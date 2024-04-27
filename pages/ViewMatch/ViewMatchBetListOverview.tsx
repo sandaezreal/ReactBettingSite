@@ -4,7 +4,6 @@ import { ESPORT_BET_LIST, ESPORT_BET_MATCH } from "@/utils/constants";
 import { useParams } from 'next/navigation'
 import React, { useEffect, useState, useRef } from "react";
 export function ViewMatchBetList(BetList_CurrentTab : any) {
-    console.log(BetList_CurrentTab.BetList_CurrentTab);
 const params = useParams<{ ViewMatch: any}>()
   return (
     <>
@@ -14,7 +13,7 @@ const params = useParams<{ ViewMatch: any}>()
             if (BetList_CurrentTab.BetList_CurrentTab == 'MP1') {
                 return (
                     <>
-              <div className="text-sikwin text-base md:text-5xl md:p-4 p-2">Map 1 Winner</div>
+              <div className="text-sikwin text-base md:text-4xl md:p-4 p-2">Map 1 Winner</div>
                 <li className="flex justify-between gap-x-6 py-5">  
               <div className="flex min-w-0 gap-x-4">
                   <div className="min-w-0 flex-auto">

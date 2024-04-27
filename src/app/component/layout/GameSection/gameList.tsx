@@ -27,11 +27,11 @@ export function gameList(gametype: any) {
     ); 
     return (
       <>
-       <div className="text-sikwin text-base md:text-5xl md:p-4 p-2">
+       <div className="text-sikwin text-base md:text-3xl md:p-4 p-2">
         {formatedDate}</div>
               <Accordion>
               <Accordion.Panel>
-              <Accordion.Title><div className="flex"><img src={`${item_list.esport_game}.png`} className="mr-4 w-[4vw] h-[4vw] rounded-md md:rounded-2xl"></img>{item_list.event}</div></Accordion.Title>
+              <Accordion.Title><div className="flex"><img src={`${item_list.esport_game}.png`} className="match-icon mr-4 w-[4vw] h-[4vw] rounded-md md:rounded-2xl"></img>{item_list.event}</div></Accordion.Title>
               <Accordion.Content>
                           {   ESPORT_BET_LIST.map(function (item) {
                               const Esport_bet_time = new Date(item.time).toLocaleString(
@@ -52,8 +52,7 @@ export function gameList(gametype: any) {
                                
                 return (
                   <> 
-                  
-                    { formatedDate == compare && item.esport_game == item_list.esport_game  ? (
+                    { formatedDate == compare && item.esport_game == item_list.esport_game && item.category == gametype.gametype ? (
                <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
                <ul role="list" className="divide-y divide-gray-100">
                  <li className="flex justify-between gap-x-6 py-5">  

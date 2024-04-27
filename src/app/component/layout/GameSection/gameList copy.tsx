@@ -27,7 +27,7 @@ export function gameList(outhouseType : any) {
     ); 
     return (
       <>
-       <div className="text-sikwin text-base md:text-5xl md:p-4 p-2">
+       <div className="text-sikwin text-base md:text-4xl md:p-4 p-2">
         {formatedDate}</div>
               <Accordion>
               <Accordion.Panel>
