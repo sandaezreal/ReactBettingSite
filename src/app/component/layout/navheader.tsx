@@ -29,7 +29,7 @@ export function NavHeader() {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="/" active>
+        <Navbar.Link href="/ReactBettingSite" active>
           Home
         </Navbar.Link>
         <Navbar.Link href="/ReactBettingSite/EsportBetting">Esport Beting</Navbar.Link>
