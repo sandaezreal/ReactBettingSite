@@ -1,6 +1,6 @@
 import { Tabs } from "flowbite-react";
 
-import ViewMatchBetListOverview from '../ViewMatch/ViewMatchBetListOverview';
+import ViewMatchBetListOverview from './ViewMatchBetListOverview';
 
 export function ViewMatchBetList() {
   return (

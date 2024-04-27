@@ -189,6 +189,10 @@ body {
   height: 6px;
 }
 
+.banner{
+  height: 12vw;
+  object-fit: cover;
+}
 @media (min-width: 900px)   {
 .match-icon {
   width: 1.5vw ; 

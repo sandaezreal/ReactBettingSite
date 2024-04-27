@@ -1,5 +1,5 @@
 "use client";
-import "@/app/globals.css";
+import "../../../src/app/globals.css";
 
 
 function Twitch() {

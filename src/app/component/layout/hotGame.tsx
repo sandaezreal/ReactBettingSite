@@ -1,5 +1,5 @@
 "use client";
-import gameSection from '@/app/component/layout/GameSection/gameSection';
+import gameSection from '../../../../pages/EsportBetting';
 
 function HotGame() {
   return (

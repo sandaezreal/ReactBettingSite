@@ -1,11 +1,11 @@
 
 "use client";
-import GameList from '@/app/component/layout/GameSection/gameList';
+import SportsList from './sportsList';
 import {Tabs, TabsRef } from "flowbite-react";
 import { useRef, useState } from "react";
 import { FaCircleMinus } from "react-icons/fa6";
 
-export function Esport() {
+export function SportsBetting() {
   const tabsRef = useRef<TabsRef>(null);
   const gametype = useRef<any>(null);
   const [activeTab, setActiveTab] = useState(0);
@@ -14,17 +14,17 @@ export function Esport() {
     <div className="flex flex-col gap-3">
       <Tabs aria-label="Default tabs" style="default" ref={tabsRef} onActiveTabChange={(tab) => setActiveTab(tab)}>
         <Tabs.Item active  title="Up Next">
-           <GameList gametype="UpNext"></GameList>
+           <SportsList gametype="UpNext"></SportsList>
         </Tabs.Item>
         <Tabs.Item title="Popular">
-        <GameList  gametype='Popular'></GameList>
+        <SportsList  gametype='Popular'></SportsList>
         </Tabs.Item>
         <Tabs.Item  icon={FaCircleMinus } title="Live">
-        <GameList  gametype='Live'></GameList>
+        <SportsList  gametype='Live'></SportsList>
         </Tabs.Item>
       </Tabs>
     </div>
   );
 }
 
-export default Esport;
+export default SportsBetting;

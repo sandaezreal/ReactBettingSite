@@ -52,11 +52,11 @@ export function gameList(gametype: any) {
                                
                 return (
                   <> 
-                    { formatedDate == compare && item.esport_game == item_list.esport_game && item.category == gametype.gametype ? (
+                    { formatedDate == compare && item.esport_game == item_list.esport_game && item.category == gametype.gametype? (
                <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
                <ul role="list" className="divide-y divide-gray-100">
                  <li className="flex justify-between gap-x-6 py-5">   
-                   <Link href={`/ViewMatch/${item.id}`} as={`/ViewMatch/${item.id}`}>
+                  <Link  href={{ pathname: 'ViewMatch', query: { category: 'Esports', matchid : item.id , esport_game: item_list.esport_game} }}>
                      <div className="flex min-w-0 gap-x-4">
                      <div className="text-sm font-semibold leading-6 text-defaul-600">{Esport_bet_time}</div> 
                      <div className="min-w-0 flex-auto">

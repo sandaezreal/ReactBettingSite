@@ -1,5 +1,5 @@
-import GameIcon from '@/app/component/layout/GameSection/gameIcon';
-import GameSection from '@/app/component/layout/GameSection/gameSection';
+import GameIcon from './gameIcon';
+import GameSection from '../GameSection/gameSection';
 export  function gameTab() {
   return (
     <>
