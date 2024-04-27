@@ -29,11 +29,11 @@ export function NavHeader() {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="ReactBettingSite" active>
+        <Navbar.Link href="/" active>
           Home
         </Navbar.Link>
-        <Navbar.Link href="ReactBettingSite/EsportBetting">Esport Beting</Navbar.Link>
-        <Navbar.Link href="ReactBettingSite/SportsBetting">Sport Betting</Navbar.Link>
+        <Navbar.Link href="EsportBetting">Esport Beting</Navbar.Link>
+        <Navbar.Link href="SportsBetting">Sport Betting</Navbar.Link>
         <Navbar.Link href="#">Casino</Navbar.Link>
         <Navbar.Link href="#">Promo</Navbar.Link>
         <Navbar.Link href="#">Help</Navbar.Link>
