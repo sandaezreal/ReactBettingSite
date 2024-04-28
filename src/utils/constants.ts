@@ -131,6 +131,7 @@ export const GAME_LIST =  [
   export const ESPORT_BET_LIST = [
     {
       id: 1,
+      match_id: 'ESLSRvsTalon',
       esport_game: "dota2",
       category: "Popular",
       event: "ESL One Birmigham",
@@ -143,6 +144,7 @@ export const GAME_LIST =  [
     },
     {
       id:2,
+      match_id: 'ESLTLVSG2IG',
       esport_game: "dota2",
       category: "Popular",
       event: "ESL One Birmigham",
@@ -155,6 +157,7 @@ export const GAME_LIST =  [
     },
     {
       id:3,
+      match_id: 'ESLFALVSBB',
       esport_game: "dota2",
       category: "Live",
       event: "ESL One Birmigham",
@@ -167,6 +170,7 @@ export const GAME_LIST =  [
     },
     {
       id:4,
+      match_id: 'RESLEVVSEB',
       esport_game: "dota2",
       category: "Live",
       event: "RES Regional Series",
@@ -179,6 +183,7 @@ export const GAME_LIST =  [
     },
     {  
       id:5,
+      match_id: 'EPLEBVSTALON',
       esport_game: "dota2",
       category: "Popular",
       event: "EPL World Series America",
@@ -191,6 +196,7 @@ export const GAME_LIST =  [
     },
     {
       id:6,
+      match_id: 'RESUKIDSVSG2',
       esport_game: "csgo",
       category: "UpNext",
       event: "RES Regional Series",
@@ -203,6 +209,7 @@ export const GAME_LIST =  [
     },
     {  
       id:9,
+      match_id: 'JorelleVSNGUYEN',
       esport_game: "dota2",
       category: "UpNext",
       event: "EPL World Series America",
@@ -214,6 +221,7 @@ export const GAME_LIST =  [
       draw_odds: 1.80,
     }, {  
       id:10,
+      match_id: 'EPLSecvsNavi',
       esport_game: "dota2",
       category: "UpNext",
       event: "EPL World Series America",
@@ -226,6 +234,7 @@ export const GAME_LIST =  [
     },
     {  
       id:11,
+      match_id: 'EPLPagvsMineski',
       esport_game: "dota2",
       category: "UpNext",
       event: "EPL World Series America",

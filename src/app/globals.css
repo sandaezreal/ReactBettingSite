@@ -199,3 +199,59 @@ body {
   height: 1.5vw;
 }
 }
+
+#loader {
+	color: #008cff;
+	height: 40px;
+	left: 45%;
+	position: absolute;
+	top: 45%;
+	width: 30%;
+}
+
+.e-btn-group {
+  margin: 25px 5px 20px 20px;
+}
+
+*.e-btn-group input, *.e-css.e-btn-group input {
+  -moz-appearance: none;
+    height: 1px;
+    margin: 0 0 0 -1px;
+    opacity: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.e-btn, .e-css.e-btn {
+
+  -webkit-font-smoothing: antialiased;
+  border: 1px solid;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif", "-apple-system", "BlinkMacSystemFont";
+  font-size: 14px;
+  font-weight: 500;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1.143em;
+  outline: none;
+  padding: 6px 12px 4px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.e-btn-group .e-btn:active, .e-btn-group input:active + label.e-btn, .e-btn-group input:checked + label.e-btn, .e-css.e-btn-group .e-btn:active, .e-css.e-btn-group input:active + label.e-btn, .e-css.e-btn-group input:checked + label.e-btn {
+  background: rgba(184, 184, 184, 0.9584);
+  border-color: transparent;
+  color: rgba(0, 0, 0, 0.87);
+  outline: #fafafa 0 solid;
+  outline-offset: 0;
+}
