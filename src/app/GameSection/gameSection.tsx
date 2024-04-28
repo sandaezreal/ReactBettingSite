@@ -14,13 +14,13 @@ export function Esport() {
     <div className="flex flex-col gap-3">
       <Tabs aria-label="Default tabs" style="default" ref={tabsRef} onActiveTabChange={(tab) => setActiveTab(tab)}>
         <Tabs.Item active  title="Up Next">
-           <GameList gametype="UpNext"></GameList>
+           <GameList gametype="UpNext" gameMode="Match Winner"></GameList>
         </Tabs.Item>
         <Tabs.Item title="Popular">
-        <GameList  gametype='Popular'></GameList>
+        <GameList  gametype='Popular' gameMode="Match Winner"></GameList>
         </Tabs.Item>
         <Tabs.Item  icon={FaCircleMinus } title="Live">
-        <GameList  gametype='Live'></GameList>
+        <GameList  gametype='Live'gameMode="Match Winner"></GameList>
         </Tabs.Item>
       </Tabs>
     </div>
