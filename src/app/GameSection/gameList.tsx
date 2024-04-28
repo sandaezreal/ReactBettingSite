@@ -8,7 +8,7 @@ import React, {
   useContext,
 } from 'react';
 
-export function gameList(props: any) {
+export default function GameList(props: any) {
   const { setglobalActiveBet, setglobalActiveBetSlip, globalActiveBetSlip } = useContext(RootContext);
   //var productsxml: any = [];
   var Esport_List = ESPORT_BET_SCHEDULE.map(function (item_list) {
@@ -164,4 +164,4 @@ export function gameList(props: any) {
   );
 }
 
-export default gameList;
+
