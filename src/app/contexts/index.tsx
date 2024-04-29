@@ -8,6 +8,8 @@ export const RootContext = createContext<RootState>({
   setglobalActiveBetSlip: (): void => undefined,
   globalBetOnProcess: [],
   setglobalBetOnProcess: (): void => undefined,
+  globalTotalOdds: 0,
+  setglobalTotalOdds: (): void => undefined,
 });
 
 export function RootProvider({
@@ -18,6 +20,7 @@ export function RootProvider({
   const [globalActiveBet, setglobalActiveBet] = useState<number | 0>(0);
   const [globalActiveBetSlip, setglobalActiveBetSlip] = useState<any | null>([]);
   const [globalBetOnProcess, setglobalBetOnProcess] = useState< any | null>([]);
+  const [globalTotalOdds, setglobalTotalOdds] = useState<number | 0>(0);
   const rootContext: RootState = useMemo(
     () => ({
       globalActiveBet,
@@ -25,9 +28,11 @@ export function RootProvider({
       globalActiveBetSlip,
       setglobalActiveBetSlip,
       globalBetOnProcess,
-      setglobalBetOnProcess
+      setglobalBetOnProcess,
+      globalTotalOdds,
+      setglobalTotalOdds
     }),
-    [globalActiveBet,globalActiveBetSlip,globalBetOnProcess]
+    [globalActiveBet,globalActiveBetSlip,globalBetOnProcess,globalTotalOdds]
   );
 
   return (

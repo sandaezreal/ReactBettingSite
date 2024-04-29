@@ -1,7 +1,7 @@
 "use client";
 
 import { Button, Drawer } from "flowbite-react";
-import { useState } from "react";
+import { useState ,useEffect } from "react";
 import BetSlipContent from '@/app/component/BetSlip/BetSlipContent';
 import React, {
   useContext,
@@ -13,7 +13,8 @@ export default function BetSlipDrawer() {
   const [isOpen, setIsOpen] = useState(false);
   // const [activeBet] = useState<number>(0);
   const handleClose = () => setIsOpen(false);
-
+  useEffect(() => {
+  }, [globalActiveBet]);
   return (
     <>
       <div className="flex  items-center justify-center">

@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.nav-slider {
-  height: 203px;
-}
 
 body {
     background: #050606;

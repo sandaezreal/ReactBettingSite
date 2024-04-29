@@ -7,4 +7,6 @@ export type RootState = {
   setglobalActiveBetSlip: React.Dispatch<React.SetStateAction<any | undefined>>;
   globalBetOnProcess: any | undefined;
   setglobalBetOnProcess: React.Dispatch<React.SetStateAction<any | undefined>>;
+  globalTotalOdds: number | 0 ;
+  setglobalTotalOdds: React.Dispatch<React.SetStateAction<any | undefined>>;
 }

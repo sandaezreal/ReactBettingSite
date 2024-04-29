@@ -6,7 +6,7 @@ export function NavHeader() {
   return (
     <Navbar fluid rounded>
       <Navbar.Brand>
-        <img src="/ho_lo@3x.png" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
+        <img src="logo.png" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
       </Navbar.Brand>
       <div className="flex md:order-2">
         <Dropdown

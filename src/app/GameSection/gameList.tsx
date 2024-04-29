@@ -4,20 +4,20 @@ import Link from "next/link";
 import { Accordion } from "flowbite-react";
 import { ESPORT_BET_LIST, ESPORT_BET_SCHEDULE } from "@/utils/constants";
 import { RootContext } from '@/app/contexts';
-import React, {
-  useContext,
-} from 'react';
+import { useContext, useEffect, useState } from "react";
 
 export default function GameList(props: any) {
-  const { setglobalActiveBet, setglobalActiveBetSlip, globalActiveBetSlip } = useContext(RootContext);
+  const { setglobalActiveBet, globalActiveBetSlip, setglobalActiveBetSlip  , setglobalTotalOdds } = useContext(RootContext);
   //var productsxml: any = [];
+  //const {valuchange, setValuchange} = useState<any | undefined>(null);
+
   var Esport_List = ESPORT_BET_SCHEDULE.map(function (item_list) {
     const formatedDate = new Date(item_list.time).toLocaleString(
       "en-US",
       {
         month: "short",
         day: "2-digit",
-        year: "numeric",
+        year: "numeric", 
       }
     );
     const removeDuplicate = [];
@@ -35,12 +35,17 @@ export default function GameList(props: any) {
     function updateInput(matchpick: any, teambet : any ,gameMode : any, odds : any  ,event: any) {
       var matchid = event.target.value;
       var exist = false; 
+      var totalodds = 0;
+        debugger;
         for (let i = 0, l = globalActiveBetSlip.length; i < l; ++i) {
-
+          totalodds = totalodds + odds;
+          setglobalTotalOdds(totalodds);
           if (globalActiveBetSlip[i].matchhid === matchid) {
             globalActiveBetSlip[i].category = matchpick;
+            globalActiveBetSlip[i].teambet = teambet;
+            globalActiveBetSlip[i].odds = odds;
             exist = true;
-            break;
+
           }     
       }
 
@@ -62,10 +67,8 @@ export default function GameList(props: any) {
           odds: odds
       })
       }
-
-
+      //setglobalActiveBetSlip(globalActiveBetSlip);
       setglobalActiveBet(globalActiveBetSlip.length);
-      console.log(globalActiveBetSlip);
     }
 
     return (
