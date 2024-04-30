@@ -12,7 +12,6 @@ const options = {
 export const MatchSchedules = async () => {
 try {
 	const response = await axios.request(options);
-	console.log(response.data);
 } catch (error) {
 	console.error(error);
 }
