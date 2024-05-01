@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/ViewMatch/ViewMatch.js", "pages/ViewMatch"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/ViewMatch/ViewMatch.js", "pages/ViewMatch", "api/Esportapi.js"],
   "exclude": ["node_modules"]
 }

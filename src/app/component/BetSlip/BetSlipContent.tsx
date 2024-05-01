@@ -3,6 +3,7 @@
 import { Button } from "flowbite-react";
 import {Tabs, TabsRef } from "flowbite-react";
 import { useRef, useState } from "react";
+import BetOpenBet from '@/app/component/BetSlip/BetOpenBet';
 import BetSlipForm from '@/app/component/BetSlip/BetSlipForm';
 import React, {
   useContext,
@@ -21,10 +22,9 @@ export function Esport() {
             <BetSlipForm/>
         </Tabs.Item>
         <Tabs.Item title="Your Bets">
-          <span className="font-medium text-gray-800 dark:text-white">{`It's so empty...`}</span>
+           <BetOpenBet/>
         </Tabs.Item>                   
       </Tabs>
-      <Button className="total_Bet">Total Bet</Button>
     </div>
     
   );

@@ -8,11 +8,11 @@ import { ESPORT_BET_LIST } from "@/utils/constants";
 import React, { useContext } from "react";
 
 export default function BetSlipForm() {
-  const {  globalActiveBetSlip, setglobalActiveBet, globalTotalOdds } =
+  const {  globalActiveBetSlip, globalTotalOdds, globalTotalStake, globalTotalPayout ,setglobalOpenBet ,setglobalActiveBetSlip , setglobalTotalPayout , setglobalTotalStake} =
     useContext(RootContext);
-  const [totalPayout, setTotalPayout] = useState<number>(0);
+  //const [totalPayout, setTotalPayout] = useState<number>(0);
   // const [TotalOdds, setTotalOdds] = useState<number>(0);
-  const [totalStake, setTotalStake] = useState<number>(0);
+  //const [totalStake, setTotalStake] = useState<number>(0);
   
   const handleChangeInput = (e: any) => {
     const { value } = e.target;
@@ -20,66 +20,58 @@ export default function BetSlipForm() {
     var batch: any,
       i = 0,odd = 0;
     while ((batch = globalActiveBetSlip[i++])) {
-      setTotalPayout(Math.round(value * globalTotalOdds * 100) / 100);
-      setTotalStake(value);
+      setglobalTotalPayout(Math.round(value * globalTotalOdds * 100) / 100);
+      setglobalTotalStake(value);
     }
-    // const payout: number = Math.round(value * multiplier * 100) / 100;
-    //for (let i = 0, l = globalActiveBetSlip.length; i < l; ++i) {
 
-    // if (globalActiveBetSlip[i].matchhid === matchid) {
-    //   globalActiveBetSlip[i].category = matchid;
-    //   globalActiveBetSlip[i].matchBet = value;
-    //   globalActiveBetSlip[i].payout = payout;
-    //   setTotalPayout(totalPayout + globalActiveBetSlip[i].payout);
-    //   break;
-    // }
-    //}
   };
-  useEffect(() => {
-  }, [globalActiveBetSlip,globalTotalOdds]);
-  var Esport_List = globalActiveBetSlip.map(function (ActiveBetSlip: any) {
-    return ESPORT_BET_LIST.map(function (item) {
-      if (ActiveBetSlip.matchhid == item.match_id) {
-        return (
-          <div key={ActiveBetSlip.match_id} className="max-w-md">
-            <div className="mb-2 block">
-              <Label htmlFor="email4" value={item.W1 + " vs " + item.W2} />
-            </div>
 
-            <div className="flex justify-between gap-x-6 py-5">
-              <div className="flex min-w-0 gap-x-4">
-                <div className="min-w-0 flex-auto">
-                  <p className="text-sm font-semibold leading-6 text-gray-600">
-                    {ActiveBetSlip.teambet}
-                  </p>
-                  <p className="text-sm font-semibold leading-6 text-gray-600">
-                    {ActiveBetSlip.gameMode}
-                  </p>
-                </div>
+  function betNow() {
+    setglobalOpenBet(globalActiveBetSlip)
+    setglobalActiveBetSlip([]);
+  }
+
+   if (globalActiveBetSlip) {
+    var Esport_List = globalActiveBetSlip.map(function (ActiveBetSlip: any) {
+      return (  
+            <div key={ActiveBetSlip.id} className="max-w-md">
+              <div className="mb-2 block">
+                <Label htmlFor="email4" value={ActiveBetSlip.awayTeam + " vs " + ActiveBetSlip.homeTeam} />
               </div>
-              <div className="flex min-w-0 gap-x-4">
-                <div
-                  className="inline-flex rounded-md shadow-sm"
-                  role="group"
-                >
-                  <p className="text-sm font-semibold leading-6 text-gray-600">
-                    {ActiveBetSlip.odds}
-                  </p>
+  
+              <div className="flex justify-between gap-x-6 py-5">
+                <div className="flex min-w-0 gap-x-4">
+                  <div className="min-w-0 flex-auto">
+                    <p className="text-sm font-semibold leading-6 text-gray-600">
+                      {ActiveBetSlip.teambet}
+                    </p>
+                    <p className="text-sm font-semibold leading-6 text-gray-600">
+                      {ActiveBetSlip.gameMode}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex min-w-0 gap-x-4">
+                  <div
+                    className="inline-flex rounded-md shadow-sm"
+                    role="group"
+                  >
+                    <p className="text-sm font-semibold leading-6 text-gray-600">
+                      {ActiveBetSlip.odds}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        );
-      }
-    });
-  })
+      )
+    })
+   }
   return (
     <>
-    {globalActiveBetSlip}
-    {Esport_List}
+    {/* {globalActiveBetSlip} */}
     
-    {Esport_List &&
+    {globalActiveBetSlip &&
     <>   
+    {Esport_List}
      <div className="flex justify-between gap-x-6 py-5">
     <div className="flex min-w-0 gap-x-4">
       <div className="min-w-0 flex-auto">
@@ -91,7 +83,7 @@ export default function BetSlipForm() {
     <div className="flex min-w-0 gap-x-4">
       <div className="inline-flex rounded-md shadow-sm" role="group">
         <p className="text-sm font-semibold leading-6 text-gray-600">
-        {totalStake}
+        {globalTotalStake}
           </p>
       </div>
     </div>
@@ -132,11 +124,12 @@ export default function BetSlipForm() {
           Payout
         </p>
         <p className="text-sm font-semibold leading-6 text-gray-600">
-          ₱ {totalPayout}
+          ₱ {globalTotalPayout}
         </p>
       </div>
     </div>
   </div>
+  <Button onClick={() => betNow()} className="w-full">Bet Now</Button>
     </>
     }
     </>

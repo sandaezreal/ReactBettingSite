@@ -13,16 +13,16 @@ export default function BetSlipDrawer() {
   const [isOpen, setIsOpen] = useState(false);
   // const [activeBet] = useState<number>(0);
   const handleClose = () => setIsOpen(false);
+
   useEffect(() => {
   }, [globalActiveBet]);
   return (
     <>
       <div className="flex  items-center justify-center">
         <Button className="button-bet-slip" onClick={() => setIsOpen(true)}> {globalActiveBet}</Button>
-          <span className="sr-only">Icon description</span>
       </div>
       <div className="drawer_height" >
-      <Drawer open={isOpen} onClose={handleClose} position="right">
+      <Drawer   backdrop={false} open={isOpen} onClose={handleClose} position="right">
         <Drawer.Header title="Sugalan" />
         <Drawer.Items> 
             <div>

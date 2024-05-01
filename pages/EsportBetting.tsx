@@ -3,6 +3,7 @@
 import "../src/app/globals.css";
 import NavHeader from '@/app/component/layout/navheader';
 import Carousel from '@/app/component/layout/headerCarousel';
+import SideBar from '@/app/component/layout/sideBar';
 import GameSection from '@/app/GameSection/gameTab';
 import BetSlipDrawer from '@/app/component/BetSlip/BetSlipDrawer';
 
